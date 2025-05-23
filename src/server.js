@@ -2,6 +2,11 @@
 
 import express from 'express'
 import exitHook from 'async-exit-hook'
+
+import swaggerJSDoc from 'swagger-jsdoc'
+import swaggerUi from 'swagger-ui-express'
+import { swaggerOptions } from '@/config/swaggerConfig'
+
 import { CONNECT_DB, CLOSE_DB } from '@/config/mongodb'
 import { env } from '@/config/environment'
 
@@ -10,20 +15,22 @@ import { errorHandlingMiddleware } from '@/middlewares/errorHandlingMiddleware'
 
 const START_SERVER = () => {
   const app = express()
+  const swaggerSpec = swaggerJSDoc(swaggerOptions)
 
   // Enable req.body json data
   app.use(express.json())
 
   // Use API V1
-  app.use('/v1', APIs_V1)
+  app.use('/api/v1', APIs_V1)
+
+  // Swagger
+  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 
   // Middleware - xử lý lỗi tập trung
   app.use(errorHandlingMiddleware)
 
   app.listen(env.PORT, env.HOST, () => {
-    console.log(
-      `3. Hello ${env.AUTHOR}, I am running at http://${env.PORT}:${env.PORT}/`
-    )
+    console.log(`3. Hello ${env.AUTHOR}, I am running at http://${env.PORT}:${env.PORT}/`)
   })
 
   // CLEAN UP

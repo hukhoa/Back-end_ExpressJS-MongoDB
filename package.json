@@ -21,7 +21,9 @@
     "express": "^5.1.0",
     "http-status-codes": "^2.3.0",
     "joi": "^17.13.3",
-    "mongodb": "^6.16.0"
+    "mongodb": "^6.16.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.27.2",
