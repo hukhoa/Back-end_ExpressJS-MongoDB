@@ -7,4 +7,5 @@ export const env = {
   HOST: process.env.HOST,
   PORT: process.env.PORT,
   AUTHOR: process.env.AUTHOR,
+  JWT_SECRET: process.env.JWT_SECRET
 }

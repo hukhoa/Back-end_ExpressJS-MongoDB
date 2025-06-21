@@ -77,6 +77,12 @@ npm install -D @babel/core @babel/cli @babel/node @babel/preset-env @babel/plugi
 # Cài swagger để tạo tài liệu API
 npm install swagger-jsdoc swagger-ui-express
 
+# Cài JWT và bcrypt để xác thực người dùng và mã hóa mật khẩu
+npm install jsonwebtoken bcryptjs
+
+# Cài CORS để cho phép frontend khác domain gọi API
+npm install cors
+
 ```
 
 3. Set up database
@@ -107,6 +113,7 @@ DATABASE_NAME='your_cloud_db_name'
 AUTHOR=''
 MONGODB_URI='mongodb://localhost:27017'
 DATABASE_NAME='your_db_name'
+JWT_SECRET=''
 HOST='localhost'
 PORT='8080'
 ```

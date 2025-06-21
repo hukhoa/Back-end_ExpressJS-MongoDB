@@ -2,7 +2,7 @@ import { MongoClient, ServerApiVersion } from 'mongodb'
 import { env } from '@/config/environment'
 
 // Not Connect -> null
-let trelloDatabaseInstance = null
+let databaseInstance = null
 
 // SET UP: CONNECT SERVER
 /*const mongoClientInstance = new MongoClient(env.MONGODB_URI, {
@@ -18,15 +18,14 @@ let trelloDatabaseInstance = null
 // SET UP: CONNECT LOCALHOST
 const mongoClientInstance = new MongoClient(env.MONGODB_URI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
+  useUnifiedTopology: true
 })
 
 // CONNECT DB
 export const CONNECT_DB = async () => {
   await mongoClientInstance.connect()
 
-  //Kết nối thành công thì lấy tên data gán vào
-  trelloDatabaseInstance = mongoClientInstance.db(env.DATABASE_NAME)
+  databaseInstance = mongoClientInstance.db(env.DATABASE_NAME)
 }
 
 // DISCONNECT DB
@@ -36,7 +35,7 @@ export const CLOSE_DB = async () => {
 
 // GET DB
 export const GET_DB = () => {
-  if (!trelloDatabaseInstance) throw new Error('Must connect to DB first')
+  if (!databaseInstance) throw new Error('Must connect to DB first')
 
-  return trelloDatabaseInstance
+  return databaseInstance
 }

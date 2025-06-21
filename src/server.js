@@ -1,11 +1,12 @@
 /* eslint-disable no-console*/
 
+import cors from 'cors'
 import express from 'express'
 import exitHook from 'async-exit-hook'
 
 import swaggerJSDoc from 'swagger-jsdoc'
 import swaggerUi from 'swagger-ui-express'
-import { swaggerOptions } from '@/config/swaggerConfig'
+import { swaggerOptions } from '@/config/swagger'
 
 import { CONNECT_DB, CLOSE_DB } from '@/config/mongodb'
 import { env } from '@/config/environment'
@@ -16,6 +17,9 @@ import { errorHandlingMiddleware } from '@/middlewares/errorHandlingMiddleware'
 const START_SERVER = () => {
   const app = express()
   const swaggerSpec = swaggerJSDoc(swaggerOptions)
+
+  // CORS
+  app.use(cors())
 
   // Enable req.body json data
   app.use(express.json())
@@ -31,13 +35,14 @@ const START_SERVER = () => {
 
   app.listen(env.PORT, env.HOST, () => {
     console.log(`3. Hello ${env.AUTHOR}, I am running at http://${env.PORT}:${env.PORT}/`)
+    console.log(`4. Swagger is running at http://${env.HOST}:${env.PORT}/api-docs`)
   })
 
   // CLEAN UP
   exitHook(() => {
-    console.log('4. Server is shutting down...')
+    console.log('5. Server is shutting down...')
     CLOSE_DB()
-    console.log('5. Disconnected from MONGODB')
+    console.log('6. Disconnected from MONGODB')
   })
 }
 

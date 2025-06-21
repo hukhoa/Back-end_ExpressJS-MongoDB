@@ -1,0 +1,92 @@
+[
+  {
+    "_id": { "$oid": "666100000000000000000001" },
+    "email": "admin1@example.com",
+    "password": "$2b$10$.T.JJa7OrHMPrNjh8raaqeFpMTzfa5PEd6czIWUaiJkFW7jSG1UCi",
+    "role": "admin",
+    "name": "Admin One",
+    "createdAt": { "$date": "2024-06-01T08:00:00Z" },
+    "updatedAt": { "$date": "2024-06-15T10:00:00Z" }
+  },
+  {
+    "_id": { "$oid": "666100000000000000000002" },
+    "email": "admin2@example.com",
+    "password": "$2b$10$.T.JJa7OrHMPrNjh8raaqeFpMTzfa5PEd6czIWUaiJkFW7jSG1UCi",
+    "role": "admin",
+    "name": "Admin Two",
+    "createdAt": { "$date": "2024-06-02T08:00:00Z" },
+    "updatedAt": { "$date": "2024-06-15T10:00:00Z" }
+  },
+  {
+    "_id": { "$oid": "666100000000000000000003" },
+    "email": "editor1@example.com",
+    "password": "$2b$10$.T.JJa7OrHMPrNjh8raaqeFpMTzfa5PEd6czIWUaiJkFW7jSG1UCi",
+    "role": "editor",
+    "name": "Editor One",
+    "createdAt": { "$date": "2024-06-03T08:00:00Z" },
+    "updatedAt": { "$date": "2024-06-15T10:00:00Z" }
+  },
+  {
+    "_id": { "$oid": "666100000000000000000004" },
+    "email": "editor2@example.com",
+    "password": "$2b$10$.T.JJa7OrHMPrNjh8raaqeFpMTzfa5PEd6czIWUaiJkFW7jSG1UCi",
+    "role": "editor",
+    "name": "Editor Two",
+    "createdAt": { "$date": "2024-06-04T08:00:00Z" },
+    "updatedAt": { "$date": "2024-06-15T10:00:00Z" }
+  },
+  {
+    "_id": { "$oid": "666100000000000000000005" },
+    "email": "editor3@example.com",
+    "password": "$2b$10$.T.JJa7OrHMPrNjh8raaqeFpMTzfa5PEd6czIWUaiJkFW7jSG1UCi",
+    "role": "editor",
+    "name": "Editor Three",
+    "createdAt": { "$date": "2024-06-05T08:00:00Z" },
+    "updatedAt": { "$date": "2024-06-15T10:00:00Z" }
+  },
+  {
+    "_id": { "$oid": "666100000000000000000006" },
+    "email": "user1@example.com",
+    "password": "$2b$10$.T.JJa7OrHMPrNjh8raaqeFpMTzfa5PEd6czIWUaiJkFW7jSG1UCi",
+    "role": "user",
+    "name": "User One",
+    "createdAt": { "$date": "2024-06-06T08:00:00Z" },
+    "updatedAt": { "$date": "2024-06-15T10:00:00Z" }
+  },
+  {
+    "_id": { "$oid": "666100000000000000000007" },
+    "email": "user2@example.com",
+    "password": "$2b$10$.T.JJa7OrHMPrNjh8raaqeFpMTzfa5PEd6czIWUaiJkFW7jSG1UCi",
+    "role": "user",
+    "name": "User Two",
+    "createdAt": { "$date": "2024-06-07T08:00:00Z" },
+    "updatedAt": { "$date": "2024-06-15T10:00:00Z" }
+  },
+  {
+    "_id": { "$oid": "666100000000000000000008" },
+    "email": "user3@example.com",
+    "password": "$2b$10$.T.JJa7OrHMPrNjh8raaqeFpMTzfa5PEd6czIWUaiJkFW7jSG1UCi",
+    "role": "user",
+    "name": "User Three",
+    "createdAt": { "$date": "2024-06-08T08:00:00Z" },
+    "updatedAt": { "$date": "2024-06-15T10:00:00Z" }
+  },
+  {
+    "_id": { "$oid": "666100000000000000000009" },
+    "email": "user4@example.com",
+    "password": "$2b$10$.T.JJa7OrHMPrNjh8raaqeFpMTzfa5PEd6czIWUaiJkFW7jSG1UCi",
+    "role": "user",
+    "name": "User Four",
+    "createdAt": { "$date": "2024-06-09T08:00:00Z" },
+    "updatedAt": { "$date": "2024-06-15T10:00:00Z" }
+  },
+  {
+    "_id": { "$oid": "66610000000000000000000a" },
+    "email": "user5@example.com",
+    "password": "$2b$10$.T.JJa7OrHMPrNjh8raaqeFpMTzfa5PEd6czIWUaiJkFW7jSG1UCi",
+    "role": "user",
+    "name": "User Five",
+    "createdAt": { "$date": "2024-06-10T08:00:00Z" },
+    "updatedAt": { "$date": "2024-06-15T10:00:00Z" }
+  }
+]
